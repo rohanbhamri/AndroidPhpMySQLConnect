@@ -1,9 +1,14 @@
 # AndroidPhpMySQLConnect
-This project shows how to connect php and andorid
+This project shows how to connect php to andorid
+
+This project contains the basics of android and php, in this project you will learn to create a registeration and login of the user
+
+
 
 BELOW ARE ALL THE STEPS FOR CREATING THE APP WITH PHP CONNECTIVITY
 
 PHP Script : 
+
 Step 1: create a folder named includes.
 
 Step 2: create a new file in includes folder named constants.php
