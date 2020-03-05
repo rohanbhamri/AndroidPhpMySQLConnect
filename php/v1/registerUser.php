@@ -7,14 +7,18 @@ require_once '../includes/DbOperations.php';
         if(isset($_POST['fullname']) and isset($_POST['email']) and isset($_POST['password'])){
 
             $db = new DbOperations();
-
-            if($db->createUser($_POST['fullname'],$_POST['email'],$_POST['password'])){
+            $result = $db->createUser($_POST['fullname'],$_POST['email'],$_POST['password']);
+            if($result == 1){
                 $response['error'] = false;
                 $response['message'] = 'User Registered Successfully';
             }
-            else{
+            elseif($result == 2){
                 $response['error'] = true;
                 $response['message'] = 'User Registeration Failed';
+            }
+            elseif($result == 0){
+                $response['error'] = true;
+                $response['message'] = 'User Already Exists';
             }
         }
         else{
